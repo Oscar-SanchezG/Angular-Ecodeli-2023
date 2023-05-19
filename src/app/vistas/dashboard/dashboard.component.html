@@ -1,0 +1,40 @@
+<app-header></app-header>
+<br>
+<br>
+<div class="container">
+  <h3>Lista de proveedores</h3><br>
+  <button type="button" class="btn btn-success" (click)="onLogin2(petForm.value)">Listar</button>
+    <table class="table">
+      <thead class="thead-light">
+        <tr >
+          <th scope="col">Status</th>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Contacto</th>
+          <th scope="col">Email</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">UsuarioNombre</th>
+          <th scope="col">Dias</th>
+          <th scope="col">Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let prod of pett" >
+          <th scope="row" >{{prod.strEstatus}}</th>
+
+          <td>{{prod.strID}}</td>
+          <td>{{prod.strNombre}}</td>
+          <td>{{prod.strContacto}}</td>
+          <td>{{prod.strEmail}}</td>
+          <td>{{prod.strUsuario}}</td>
+          <td>{{prod.strUsuarioNombre}}</td>
+          <td>{{prod.intDias}}</td>
+          <td>{{prod.strTipo}}</td>
+        </tr>
+
+
+      </tbody>
+
+</table>
+</div>
+<app-footer></app-footer>
